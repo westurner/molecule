@@ -5,7 +5,7 @@ History
 1.25.1
 ======
 
-* Update ansible-lint for Ansible 1.24 compatibility.
+* Update ansible-lint for Ansible 2.4 compatibility.
 
 1.25
 ====
