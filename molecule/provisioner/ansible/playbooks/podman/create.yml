@@ -89,6 +89,9 @@
         {% if item.security_opts is defined %}{% for i in item.security_opts %}--security-opt {{ i }} {% endfor %}{% endif %}
         {% if item.volumes is defined %}{% for i in item.volumes %}--volume {{ i }} {% endfor %}{% endif %}
         {% if item.tmpfs is defined %}{% for i in item.tmpfs %}--tmpfs={{ i }} {% endfor %}{% endif %}
+        {% if item.storage_driver is defined %}--storage-driver={{ item.storage_driver }}{% endif %}
+        {% if item.storage_opt is defined %}--storage-opt={{ item.storage_opt }}{% endif %}
+        {% if item.device is defined %}{% for i in item.device %}--device={{ i }} {% endfor %}{% endif %}
         {% if item.capabilities is defined %}{% for i in item.capabilities %}--cap-add={{ i }} {% endfor %}{% endif %}
         {% if item.exposed_ports is defined %}--expose="{{ item.exposed_ports|join(',') }}"{% endif %}
         {% if item.published_ports is defined %}--publish="{{ item.published_ports|join(',') }}"{% endif %}
